@@ -15,10 +15,13 @@ let conf = {
         path: r("../dist"),
         publicPath: ""
     },
+    resolve: {
+        extensions: [".ts", ".vue"]
+    },
     module: {
         rules: [
             {
-                test: /.vue$/,
+                test: /\.vue$/,
                 use: {
                     loader: "vue-loader",
                     options: {
@@ -26,8 +29,32 @@ let conf = {
                     }
                 }
             },
+            // {
+            //     test: /\.ts$/,
+            //     use: {
+            //         loader: "awesome-typescript-loader"
+            //     }
+            // },
             {
-                test: /.js$/,
+                test: /\.ts$/,
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            presets: ["@babel/preset-env"],
+                            /**
+                             * Default false. When set, the given directory will be used to cache the results of the loader. Future webpack builds will attempt to read from the cache to avoid needing to run the potentially expensive Babel recompilation process on each run. If the value is blank (loader: 'babel-loader?cacheDirectory') or true (loader: 'babel-loader?cacheDirectory=true'), the loader will use the default cache directory in node_modules/.cache/babel-loader or fallback to the default OS temporary file directory if no node_modules folder could be found in any root directory.
+                             */
+                            cacheDirectory: true
+                        }
+                    },
+                    {
+                        loader: "ts-loader"
+                    }
+                ]
+            },
+            {
+                test: /\.js$/,
                 use: {
                     loader: "babel-loader",
                     options: {
@@ -40,15 +67,13 @@ let conf = {
                 }
             },
             {
-                test: /.css$/,
+                test: /\.css$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader
                     },
                     "css-loader",
                 ]
-            },
-            {
             }
         ]
     },
