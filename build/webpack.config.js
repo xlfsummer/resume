@@ -8,17 +8,20 @@ let MiniCssExtractPlugin = require("mini-css-extract-plugin");
 let conf = {
     mode: "development",
     entry: {
-        "script": r("../src/index.js")
+        "script": r("../src/index.ts")
     },
     output: {
         filename: "script.[contenthash:4].js",
         path: r("../dist"),
         publicPath: ""
     },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"]
+    },
     module: {
         rules: [
             {
-                test: /.vue$/,
+                test: /\.vue$/,
                 use: {
                     loader: "vue-loader",
                     options: {
@@ -27,7 +30,13 @@ let conf = {
                 }
             },
             {
-                test: /.js$/,
+                test: /\.ts$/,
+                use: {
+                    loader: "ts-loader"
+                }
+            },
+            {
+                test: /\.js$/,
                 use: {
                     loader: "babel-loader",
                     options: {
@@ -40,7 +49,7 @@ let conf = {
                 }
             },
             {
-                test: /.css$/,
+                test: /\.css$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader

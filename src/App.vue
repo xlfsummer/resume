@@ -13,11 +13,12 @@ export default {
 
 <script lang="ts">
 import Vue from 'vue'
-export default Vue.extend({
+
+export default class extends Vue {
     data(){
         return {
             msg: "Hello"
         }
     }
-})
+}
 </script>
