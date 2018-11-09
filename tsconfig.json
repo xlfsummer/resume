@@ -1,5 +1,13 @@
 {
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "es2015",
+            "esnext"
+        ]
+    },
     "include": [
-        "./src/*"
+        "./src/*", 
+        "src/data/time-line.js", "data/data/time-line.js"
     ]
 }

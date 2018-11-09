@@ -1,3 +1,89 @@
 body{
+    margin: 0;
+    padding: 30px;
     background: #efefef;
+}
+ol, ul{
+    padding: 0; margin: 0;
+}
+li{
+    display: block;
+}
+
+
+.time-line{
+    margin: 0 -30px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: flex-start;
+}
+
+.time-line__item{
+    position: relative;
+    padding: 30px;
+    white-space: normal;
+    vertical-align: top;
+    flex: none;
+    background: linear-gradient(#aaa, transparent) left 20px/1.5px 80% no-repeat;
+    transition: .5s;
+}
+
+.time-line__item--edu{
+    /* background: rgb(233, 240, 233); */
+}
+
+.time-line__item--work{
+    /* background: rgb(226, 235, 243); */
+}
+.time-line__item--work:nth-child(even){
+    /* background: rgb(240, 244, 248); */
+}
+
+.time-line__tag{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translate(-50%);
+    width: min-content;
+    white-space: nowrap;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.time-line__axis{
+    height: 1px;
+    margin: 0 -30px;
+    background-color: #aaa;
+}
+
+.time-line__sub{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: -30px;
+}
+
+.time-line__sub-item{
+    padding: 30px;
+    white-space: normal;
+}
+
+.skill-progress{
+    background: cadetblue;
+    color:#fff;
+    height: 2em;
+    line-height: 2em;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+
+.link-list{
+    padding-left: 20px;
+}
+.link-list li{
+    display: list-item;
+    margin-bottom: 10px;
 }

@@ -5,5 +5,13 @@ import "./main.css";
 
 new Vue({
     el: "#app",
-    render: h=>h(App)
+    render: h => h(App)
+});
+
+window.addEventListener("error", ev => {
+    window.alert(ev.message);
+});
+
+window.addEventListener("unhandledrejection", ev => {
+    window.alert(ev.reason);
 });
