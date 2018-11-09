@@ -1,0 +1,17 @@
+
+language: node_js
+
+node_js:
+  - lts/*                      # install the long-term stable version of nodejs
+
+script:                       
+  - npm run build              # run build script
+
+deploy:                        # deploy phase, run after script phase
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true           # keep git commit history
+  local-dir: dist              # copy branch:master/dist to branch:gh-pages/
+  on:
+    branch: master             # deploy on commit to master branch
