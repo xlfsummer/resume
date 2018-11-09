@@ -2,7 +2,7 @@
 language: node_js
 
 node_js:
-  - lts/*                      # install the long-term stable version of nodejs
+  - "8.11.3"                      # install the long-term stable version of nodejs
 
 script:                       
   - npm run build              # run build script
