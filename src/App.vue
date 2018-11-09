@@ -66,6 +66,7 @@
     </div>
 </template>
 
+<<<<<<< HEAD
 <script lang="ts">
 import Vue from "vue";
 import { decrypt } from "crypto-js/aes";
@@ -76,6 +77,11 @@ import * as basicData from "./static/basic.json.data"
 import * as otherData from "./static/other.json.data"
 
 export default/*  class App extends Vue  */{
+=======
+<script lang="js">
+import Vue from 'vue'
+export default Vue.extend({
+>>>>>>> 5d4e754874f42ad00ea8a303846b694046aa18bd
     data(){
         return {
             basic: {},

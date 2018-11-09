@@ -30,6 +30,12 @@ let conf = {
                     }
                 }
             },
+            // {
+            //     test: /\.ts$/,
+            //     use: {
+            //         loader: "awesome-typescript-loader"
+            //     }
+            // },
             {
                 test: /\.js$/,
                 use: {
