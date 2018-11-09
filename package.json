@@ -14,11 +14,7 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-optional-chaining": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
-<<<<<<< HEAD
     "@babel/preset-typescript": "^7.1.0",
-=======
-    "awesome-typescript-loader": "^5.2.1",
->>>>>>> 5d4e754874f42ad00ea8a303846b694046aa18bd
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^0.1.19",
@@ -30,11 +26,7 @@
     "mini-css-extract-plugin": "^0.4.3",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.23.0",
-<<<<<<< HEAD
     "ts-loader": "^5.2.2",
-=======
-    "ts-loader": "^5.2.1",
->>>>>>> 5d4e754874f42ad00ea8a303846b694046aa18bd
     "typescript": "^3.1.1",
     "vue-loader": "^15.4.2",
     "vue-template-compiler": "^2.5.17",
